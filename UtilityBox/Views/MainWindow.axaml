@@ -1,0 +1,147 @@
+<Window xmlns="https://github.com/avaloniaui"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:vm="using:UtilityBox.ViewModels"
+		xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		mc:Ignorable="d" d:DesignWidth="1300" d:DesignHeight="800"
+		x:Class="UtilityBox.Views.MainWindow"
+		x:DataType="vm:MainWindowViewModel"
+		Icon="/Assets/avalonia-logo.ico"
+		Title="Utility Box">
+
+	<Design.DataContext>
+		<!-- This only sets the DataContext for the previewer in an IDE, to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+		<vm:MainWindowViewModel/>
+	</Design.DataContext>
+	<TabControl x:Name="MainTabCtrl" Margin="2">
+		<TabItem x:Name="TI_VPE" Header="Very primitive encryption" FontSize="14">
+			<Grid ColumnDefinitions="1*,5,1*" RowDefinitions="22,55,40,1*,30">
+				<Menu Grid.Row="0" Grid.ColumnSpan="3" Height="22">
+					<MenuItem Header="Open/Save _Message" FontSize="12">
+						<MenuItem Header="Open plain message text file"/>
+						<MenuItem Header="Open encrypted message binary file"/>
+						<MenuItem Header="Open encrypted message text file"/>
+						<Separator/>
+						<MenuItem Header="Save plain message text file"/>
+						<MenuItem Header="Save encrypted message binary file"/>
+						<MenuItem Header="Save encrypted message text file"/>
+					</MenuItem>
+					<MenuItem Header="_Settings" FontSize="12">
+						<MenuItem Header="Open settings composer"/>
+						<Separator/>
+						<MenuItem Header="Generate all settings for current encryption"/>
+						<MenuItem Header="Open and use settings"/>
+						<MenuItem Header="Save currently used settings to a file"/>
+						<Separator/>
+						<MenuItem Header="Save current settings to a file"/>
+						<MenuItem Header="Load settings from a file"/>
+						<MenuItem Header="Save current settings library to a file"/>
+						<MenuItem Header="Load settings library from a file"/>
+						<MenuItem Header="Save current table library to a file"/>
+						<MenuItem Header="Load table library from a file"/>
+					</MenuItem>
+					<MenuItem Header="_Quick select settings" FontSize="12">
+						<!--Automatically generated content-->
+					</MenuItem>
+				</Menu>
+				<Grid Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" ColumnDefinitions="128,1*,72" RowDefinitions="1*,2*">
+					<TextBlock Text="Rotor positions:" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Margin="2" FontSize="12"/>
+					<DockPanel Grid.Row="1" Grid.Column="0">
+						<Button Name="B_VPE_RotPosMinus" Content="–" Margin="2, 2, 1, 2" FontSize="12"/>
+						<Button Name="B_VPE_RotPosPlus" Content="+" Margin="1, 2, 1, 2" FontSize="12"/>
+						<TextBox x:Name="TB_VPE_RotPozIdx" Margin="1, 2, 2, 2" FontSize="14"/>
+					</DockPanel>
+					<TextBox x:Name="TB_VPE_RotPoz" Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" Margin="2, 2, 2, 2" TextWrapping="Wrap" FontSize="13"/>
+					<StackPanel Grid.Row="0" Grid.Column="2" Grid.RowSpan="2">
+						<Button x:Name="B_VPE_UseCustRotPoz" Content="Use" Margin="1" FontSize="12" Padding="4" MinWidth="72"/>
+						<Button x:Name="B_VPE_RemSelRotPoz" Content="Remove" Margin="1" FontSize="12" Padding="4" MinWidth="72"/>
+					</StackPanel>
+				</Grid>
+				<Grid Grid.Row="2" Grid.Column="0" ColumnDefinitions="1*,1*" RowDefinitions="1*">
+					<TextBlock Grid.Row="0" Grid.Column="0" Text="Plain text" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="20"/>
+					<SplitButton Grid.Row="0" Grid.Column="1" MaxHeight="21" MaxWidth="200" Content="Encrypt as" HorizontalAlignment="Right">
+						<SplitButton.Flyout>
+							<MenuFlyout>
+								<MenuItem Header="Text"/>
+								<MenuItem Header="Base 64"/>
+								<MenuItem Header="Base 128"/>
+								<MenuItem Header="Base 128 with spaces"/>
+								<MenuItem Header="Binary"/>
+								<MenuItem Header="Binary with dashes"/>
+							</MenuFlyout>
+						</SplitButton.Flyout>
+					</SplitButton>
+				</Grid>
+				<Grid Grid.Row="2" Grid.Column="2" ColumnDefinitions="1*,1*" RowDefinitions="1*">
+					<TextBlock Grid.Row="0" Grid.Column="0" Text="Encrypted text" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="20"/>
+					<SplitButton Grid.Row="0" Grid.Column="1" MaxHeight="21" MaxWidth="200" Content="Decrypt as" HorizontalAlignment="Right">
+						<SplitButton.Flyout>
+							<MenuFlyout>
+								<MenuItem Header="Text"/>
+								<MenuItem Header="Base 64"/>
+								<MenuItem Header="Base 128"/>
+								<MenuItem Header="Base 128 with spaces"/>
+								<MenuItem Header="Binary"/>
+								<MenuItem Header="Binary with dashes"/>
+							</MenuFlyout>
+						</SplitButton.Flyout>
+					</SplitButton>
+				</Grid>
+				<TextBox x:Name="TB_VPE_Left" Grid.Column="0" Grid.Row="3" Margin="2" TextWrapping="Wrap" AcceptsReturn="True" AcceptsTab="True" FontFamily="Liberation Sans" FontSize="12"/>
+				<TextBox x:Name="TB_VPE_Right" Grid.Column="2" Grid.Row="3" Margin="2" TextWrapping="Wrap" AcceptsReturn="True" AcceptsTab="True" FontFamily="Liberation Sans" FontSize="12"/>
+				<Grid Grid.Row="4" Grid.Column="0" ColumnDefinitions="1*,1*,1*">
+					<StackPanel Grid.Column="0" Orientation="Horizontal">
+						<Label Content="Entropy:"/>
+						<TextBox x:Name="TB_VPE_Left_Entropy" MinWidth="100"/>
+					</StackPanel>
+					<StackPanel Grid.Column="1" Orientation="Horizontal">
+						<Label Content="Unique Char Count:"/>
+						<TextBox x:Name="TB_VPE_Left_UniqueCharCount" MinWidth="50" MaxHeight="23" Margin="4"/>
+					</StackPanel>
+					<StackPanel Grid.Column="2" Orientation="Horizontal">
+						<Label Content="Length:"/>
+						<TextBox x:Name="TB_VPE_Left_Length" MinWidth="50" MaxHeight="23" Margin="4"/>
+					</StackPanel>
+				</Grid>
+				<Grid Grid.Row="4" Grid.Column="2" ColumnDefinitions="1*,1*,1*">
+					<StackPanel Grid.Column="0" Orientation="Horizontal">
+						<Label Content="Entropy:"/>
+						<TextBox x:Name="TB_VPE_Right_Entropy" MinWidth="100" MaxHeight="23" Margin="4"/>
+					</StackPanel>
+					<StackPanel Grid.Column="1" Orientation="Horizontal">
+						<Label Content="Unique Char Count:"/>
+						<TextBox x:Name="TB_VPE_Right_UniqueCharCount" MinWidth="50" MaxHeight="23" Margin="4"/>
+					</StackPanel>
+					<StackPanel Grid.Column="2" Orientation="Horizontal">
+						<Label Content="Length:"/>
+						<TextBox x:Name="TB_VPE_Right_Length" MinWidth="50" MaxHeight="23" Margin="4"/>
+					</StackPanel>
+				</Grid>
+			</Grid>
+		</TabItem>
+		<TabItem x:Name="TI_NDT" Header="New date–time" FontSize="14">
+			<Grid ColumnDefinitions="1*" RowDefinitions="1*">
+			</Grid>
+		</TabItem>
+		<TabItem x:Name="TI_DTCalc" Header="Date–time calculator" FontSize="14">
+			<Grid ColumnDefinitions="1*" RowDefinitions="1*">
+			</Grid>
+		</TabItem>
+		<TabItem x:Name="TI_Factor" Header="Factorizator" FontSize="14">
+			<Grid ColumnDefinitions="1*" RowDefinitions="1*">
+			</Grid>
+		</TabItem>
+		<TabItem x:Name="TI_PSWDGen" Header="Password generator" FontSize="14">
+			<Grid ColumnDefinitions="1*" RowDefinitions="1*">
+			</Grid>
+		</TabItem>
+		<TabItem x:Name="TI_MapDown" Header="Maps downloader" FontSize="14">
+			<Grid ColumnDefinitions="1*" RowDefinitions="1*">
+			</Grid>
+		</TabItem>
+		<TabItem x:Name="TI_SunCalc" Header="Sunrise/sunset calculator" FontSize="14">
+			<Grid ColumnDefinitions="1*" RowDefinitions="1*">
+			</Grid>
+		</TabItem>
+	</TabControl>
+</Window>

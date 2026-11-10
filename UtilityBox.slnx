@@ -1,0 +1,11 @@
+<Solution>
+  <Project Path="Common/Common.csproj" />
+  <Project Path="DTcalc/DTcalc.csproj" />
+  <Project Path="Factorizator/Factorizator.csproj" />
+  <Project Path="MapyCzDownloader/MapyCzDownloader.csproj" />
+  <Project Path="NeueDT/NeueDT.csproj" />
+  <Project Path="PswdGen/PswdGen.csproj" />
+  <Project Path="UtilityBox/UtilityBoxGUI.csproj" />
+  <Project Path="UtilityBoxCLI/UtilityBoxCLI.csproj" Id="b1bb87c3-e002-4e36-bf6c-3371ebc9aa02" />
+  <Project Path="VPE/VPE.csproj" />
+</Solution>

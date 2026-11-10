@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="VPE.Codec">
+    <Position X="10" Y="2.5" Width="3.25" />
+    <NestedTypes>
+      <Enum Name="VPE.Codec.Encoding">
+        <TypeIdentifier>
+          <NewMemberFileName>Codec.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>KAAAAAAAAABAAAAAAAAAAAAAAAAAEAAIAhAAQAAAAAA=</HashCode>
+      <FileName>Codec.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VPE.Codepage" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAEgAAAAAAAAAAAQACQAAAAACAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Codepage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VPE.Crypto" Collapsed="true">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>hYAAAAFEAACQUJQRICABAQAJYAABIhIAAAAIYAQACIA=</HashCode>
+      <FileName>Crypto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VPE.FileHandling" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAQAgIACABCCAACAAAAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>FileHandling.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VPE.Generators" Collapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAgoABBAAAAAAAgAAAIAAAQAAEAAAAAQAAAQAA=</HashCode>
+      <FileName>Generators.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VPE.Key_Base" Collapsed="true">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAACAAAAAA=</HashCode>
+      <FileName>Key.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VPE.Key">
+    <Position X="5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AADCAgGISLBAAACAAAIAIAQABECACEAAGAIAKBAyYcA=</HashCode>
+      <FileName>Key.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VPE.PrimeDefinedConstant" Collapsed="true">
+    <Position X="11" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAACgAAEAAAAAAAABAAAAEAAEAAAAAAAAAA=</HashCode>
+      <FileName>Key.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VPE.TableLibrary" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAACAAAAAAAAAAEAAgAAAAAAAAQAAAEAAQAAAIQA=</HashCode>
+      <FileName>Key.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VPE.KeyesLibrary" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAACAAAAAAAAACAAAEAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Key.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VPE.Table">
+    <Position X="7.5" Y="2.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>BCECAgLAAAAAAAAgAAICAAKAAAAAAAAAAAABAABQAQA=</HashCode>
+      <FileName>Table.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

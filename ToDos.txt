@@ -1,0 +1,19 @@
+00: VPE: Data gridy: dát je na vlastní tab v okně nastavení.
+01: VPE: Scrollbar k rotorům.
+02: VPE: Customizable codepage jako součástí klíče.
+03: VPE: Dokončit bit packery a použít je pro tabulky (ukládání).
+04: VPE: Přidávání náhodných znaků: optimalizovat, nevkládat je rovnou do listu, ale složit nový list.
+05: VPE: Affine modulation: přidat generátory čísel.
+06: VPE: Rotorový notche: implementovat.
+07: VPE: Implementovat posouvání rotorů o „náhodný“ počet.
+08: General: Multithreading: GUI a logika do vlastních vláken.
+09: VPE: Validace vstupu: ukázat uživateli neplatné znaky cedulkou a červeně v textu.
+10: General: Persistent storage: pomocí JSONu.
+11: General: Přidat Sunrise Sunset Algorithm (https://github.com/cosinekitty/astronomy)
+12: VPE: crypto: ABM num gens: uložit poslední výsledek, použít ho jako vstup pro příští použití, aby se generování čísel neopakovalo.
+13: VPE: Testovat komprimovatelnost šifrovaného textu. Jako skóre jak náhodný to je.
+14: VPE: CLI k VPE, provizorium než bude GUI.
+15: VPE: Provázat rotory a modulaci.
+16: VPE: Generovat 2048b primes, ověřovat pravděpodobnostně, použít do klíče místo malých.
+17: VPE: General purpose encryption: Šifrovat cokoliv, speciální případ s 256 „znakovou“ codepage.
+18: VPE: Update file structures calc sheet!

@@ -1,0 +1,81 @@
+<Window xmlns="https://github.com/avaloniaui"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		mc:Ignorable="d" d:DesignWidth="1350" d:DesignHeight="900"
+		x:Class="UtilityBox.Views.VPESettings"
+		Title="VPESettings">
+	<Grid ColumnDefinitions="5*, 1*" RowDefinitions="30, 1*">
+		<StackPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal">
+			<TextBlock Text="Name:" Margin="1, 8, 1, 7" FontSize="14"/>
+			<TextBox x:Name="TB_Name" Margin="1, 11, 1, 7" Width="300" FontSize="14"/>
+			<Button x:Name="B_Rename" Content="Rename currently selected" Margin="1" FontSize="14"/>
+			<TextBlock Text="Select settings:" Margin="20, 7, 1, 7" FontSize="14"/>
+			<ComboBox x:Name="CB_SettLib" Margin="1" MinWidth="320" FontSize="14">
+			</ComboBox>
+		</StackPanel>
+		<TabControl Grid.Column="0" Grid.Row="1">
+			<TabItem Header="Tables, constants" FontSize="14">
+				<Grid ColumnDefinitions="1*, 1*, 1*" RowDefinitions="1*">
+					<HeaderedContentControl Grid.Row="0" Grid.Column="0" Header="Rotors">
+						<ScrollViewer VerticalScrollBarVisibility="Auto">
+							<StackPanel>
+								<!--Rotors, automatically generated.-->
+							</StackPanel>
+						</ScrollViewer>
+					</HeaderedContentControl>
+					<HeaderedContentControl Grid.Row="0" Grid.Column="1" Header="Swaps">
+						<ScrollViewer VerticalScrollBarVisibility="Auto">
+							<StackPanel>
+								<!--Swaps, automatically generated.-->
+							</StackPanel>
+						</ScrollViewer>
+					</HeaderedContentControl>
+					<HeaderedContentControl Grid.Row="0" Grid.Column="2" Header="Reflector, constants…">
+						
+					</HeaderedContentControl>
+				</Grid>
+			</TabItem>
+			<TabItem Header="Prime defined constants" FontSize="14">
+				<Grid ColumnDefinitions="1*" RowDefinitions="1*">
+
+				</Grid>
+			</TabItem>
+		</TabControl>
+		<Grid Grid.Row="1" Grid.Column="1" ColumnDefinitions="1*" RowDefinitions="5*,1*">
+			<HeaderedContentControl Grid.Row="0" Grid.Column="0" Header="Settings storage">
+				<StackPanel Orientation="Vertical">
+					<Button x:Name="B_SaveSett" HorizontalAlignment="Stretch" Margin="1, 5, 1, 1">
+						<TextBlock Text="Save current settings to a file" TextWrapping="Wrap" TextAlignment="Center" FontSize="14"/>
+					</Button>
+					<Button x:Name="B_LoadSett" HorizontalAlignment="Stretch" Margin="1, 1, 1, 5">
+						<TextBlock Text="Load settings from a file" TextWrapping="Wrap" TextAlignment="Center" FontSize="14"/>
+					</Button>
+					<Button x:Name="B_SaveSettLib" HorizontalAlignment="Stretch" Margin="1, 5, 1, 1">
+						<TextBlock Text="Save current settings library to a file" TextWrapping="Wrap" TextAlignment="Center" FontSize="14"/>
+					</Button>
+					<Button x:Name="B_LoadSettLib" HorizontalAlignment="Stretch" Margin="1, 1, 1, 5">
+						<TextBlock Text="Load settings library from a file" TextWrapping="Wrap" TextAlignment="Center" FontSize="14"/>
+					</Button>
+					<Button x:Name="B_SaveTableLib" HorizontalAlignment="Stretch" Margin="1, 5, 1, 1">
+						<TextBlock Text="Save current table library to a file" TextWrapping="Wrap" TextAlignment="Center" FontSize="14"/>
+					</Button>
+					<Button x:Name="B_LoadTableLib" HorizontalAlignment="Stretch" Margin="1, 1, 1, 5">
+						<TextBlock Text="Load table library from a file" TextWrapping="Wrap" TextAlignment="Center" FontSize="14"/>
+					</Button>
+					<Button x:Name="B_RemoveActive" HorizontalAlignment="Stretch" Margin="1, 5, 1, 1">
+						<TextBlock Text="Remove these settings" TextWrapping="Wrap" TextAlignment="Center" FontSize="14"/>
+					</Button>
+				</StackPanel>
+			</HeaderedContentControl>
+			<HeaderedContentControl Grid.Row="1" Grid.Column="0" Header="Current settings">
+				<StackPanel Orientation="Vertical" Grid.Row="2" >
+					<Button x:Name="B_Save" Margin="1" HorizontalAlignment="Stretch">
+						<TextBlock Text="Save edits to current settings" TextWrapping="Wrap" TextAlignment="Center"/>
+					</Button>
+					<Button x:Name="B_Submit" Content="Submit" Margin="1" FontWeight="Bold" HorizontalContentAlignment="Center" HorizontalAlignment="Stretch"/>
+				</StackPanel>
+			</HeaderedContentControl>
+		</Grid>
+	</Grid>
+</Window>
